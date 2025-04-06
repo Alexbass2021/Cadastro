@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cadastro de Clientes e Pedidos</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+  </head>
+  <body>
+    <h1>Cadastro de Clientes e Pedidos</h1>
+
+    <div class="form-section">
+      <h2>Cadastro de Cliente</h2>
+      <input type="text" id="nomeCliente" placeholder="Nome do Cliente" />
+      <input type="email" id="emailCliente" placeholder="Email do Cliente" />
+      <button onclick="cadastrarCliente()">Cadastrar Cliente</button>
+    </div>
+
+    <div class="form-section">
+      <h2>Cadastro de Pedido</h2>
+      <select id="clientePedidoSelect">
+        <option value="">Selecione um cliente</option>
+      </select>
+      <input
+        type="text"
+        id="descricaoPedido"
+        placeholder="Descrição do Pedido"
+      />
+      <button onclick="cadastrarPedido()">Cadastrar Pedido</button>
+    </div>
+
+    <div class="form-section">
+      <h2>Pedidos do Cliente Selecionado</h2>
+      <ul id="listaPedidos"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
